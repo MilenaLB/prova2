@@ -37,6 +37,10 @@
             <td><?= h($user->email) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Disciplina') ?></th>
+            <td><?= h($user->discipline) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($user->id) ?></td>
         </tr>

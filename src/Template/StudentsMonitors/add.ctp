@@ -17,7 +17,7 @@
     <fieldset>
         <legend><?= __('Add Students Monitor') ?></legend>
         <?php
-             echo $this->Form->control('student_id');
+            echo $this->Form->control('student_id');
             echo $this->Form->control('monitor_id', ['options' => $monitors, 'empty' => true]);
             echo $this->Form->control('date_time_start');
             echo $this->Form->control('date_time_fin');
