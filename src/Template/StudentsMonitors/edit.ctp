@@ -25,10 +25,12 @@
         <?php
             echo $this->Form->control('student_id');
             echo $this->Form->control('monitor_id', ['options' => $users, 'empty' => true]);
-            echo $this->Form->control('role');
+            echo $this->Form->control('role', [
+            'options' => ['Realizado' => 'Realizado', 'Aluno Faltou' => 'Aluno Faltou', 'Cancelado' => 'Cancelado'] ]);
             echo $this->Form->control('feedback');
             echo $this->Form->control('date_time_start', ['empty' => true]);
             echo $this->Form->control('date_time_fin', ['empty' => true]);
+            
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

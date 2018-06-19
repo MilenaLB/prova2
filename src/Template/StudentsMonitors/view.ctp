@@ -30,10 +30,10 @@
             <th scope="row"><?= __('Feedback') ?></th>
             <td><?= h($studentsMonitor->feedback) ?></td>
         </tr>
-        <tr>
+        <!-- <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($studentsMonitor->id) ?></td>
-        </tr>
+        </tr> -->
         <tr>
             <th scope="row"><?= __('Student Id') ?></th>
             <td><?= $this->Number->format($studentsMonitor->student_id) ?></td>

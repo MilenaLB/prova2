@@ -12,7 +12,7 @@ a {
 }
 
 .side-nav li a:not(.button) {
-    color: #15848F;
+    color:#0000CD;
 }
 
 .side-nav li a:not(.button):hover {

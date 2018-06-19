@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
+
 
 /**
  * StudentsMonitors Controller
@@ -57,8 +59,15 @@ class StudentsMonitorsController extends AppController
             $studentsMonitor->student_id = $this->Auth->user('id');
             if ($this->StudentsMonitors->save($studentsMonitor)) {
                 $this->Flash->success(__('The students monitor has been saved.'));
+                // $email = new Email('default');
+                // $email->from(['testezerozerosete@gmail.com' => 'PROVA'])
+                //    ->to($StudentsMonitors['email'])
+                //    ->subject('BEM VINDO USUARIO')
+                //    ->send('CADASTRO REALIZADO  COM SUCESSO ');
 
-                return $this->redirect(['action' => 'index']);
+
+                return $this->redirect(['action' => 'index'])
+                ;
             }
             $this->Flash->error(__('The students monitor could not be saved. Please, try again.'));
         }

@@ -66,7 +66,9 @@ class StudentsMonitorsTable extends Table
             ->scalar('role')
             ->maxLength('role', 20)
             ->requirePresence('role', 'create')
-            ->notEmpty('role');
+            ->add('role', 'inList', [
+              'rule' => ['inList', ['Realizada', 'Aluno Faltou', 'Cancelada']],
+              'message' => 'Por favor entre com um papel válido!']);
 
         $validator
             ->scalar('feedback')
