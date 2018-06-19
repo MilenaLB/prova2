@@ -54,7 +54,10 @@ class UsersTable extends Table
 
         $validator
             ->scalar('role')
-            ->allowEmpty('role');
+            ->allowEmpty('role')
+            ->add('role', 'inList', [
+            'rule' => ['inList', ['Monitor', 'Estudante']],
+            'message' => 'Por favor entre com um papel válido!']);
 
         $validator
             ->scalar('name')
@@ -79,10 +82,11 @@ class UsersTable extends Table
             ->requirePresence('email', 'create')
             ->notEmpty('email');
 
-        // $validator
-        //     ->discipline('discipline')
-        //     ->requirePresence('discipline', 'create')
-        //     ->notEmpty('discipline');
+        $validator
+            ->scalar('discipline')
+            ->maxLength('discipline', 50)
+            ->requirePresence('discipline', 'create')
+            ->notEmpty('discipline');
 
         return $validator;
     }
