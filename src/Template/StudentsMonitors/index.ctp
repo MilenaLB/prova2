@@ -32,7 +32,7 @@
         <tbody>
             <?php foreach ($studentsMonitors as $studentsMonitor): ?>
             <tr>
-               <!--  <td><?= $this->Number->format($studentsMonitor->id) ?></td> -->
+              <!--   <td><?= $this->Number->format($studentsMonitor->id) ?></td> -->
                 <td><?= $this->Number->format($studentsMonitor->student_id) ?></td>
                 <td><?= $studentsMonitor->has('user') ? $this->Html->link($studentsMonitor->user->name, ['controller' => 'Users', 'action' => 'view', $studentsMonitor->user->id]) : '' ?></td>
                 <td><?= h($studentsMonitor->role) ?></td>

@@ -56,7 +56,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
                  $email = new Email('default');
-                $email->from(['testezerozerosete@gmail.com' => 'PROVA'])
+                 $email->from(['testezerozerosete@gmail.com' => 'PROVA'])
                     ->to($user['email'])
                     ->subject('BEM VINDO USUARIO')
                     ->send('CADASTRO REALIZADO  COM SUCESSO ');
