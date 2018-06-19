@@ -17,7 +17,7 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+               <!--  <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
                 <th scope="col"><?= $this->Paginator->sort('student_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('monitor_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('role') ?></th>
@@ -32,7 +32,7 @@
         <tbody>
             <?php foreach ($studentsMonitors as $studentsMonitor): ?>
             <tr>
-                <td><?= $this->Number->format($studentsMonitor->id) ?></td>
+               <!--  <td><?= $this->Number->format($studentsMonitor->id) ?></td> -->
                 <td><?= $this->Number->format($studentsMonitor->student_id) ?></td>
                 <td><?= $studentsMonitor->has('user') ? $this->Html->link($studentsMonitor->user->name, ['controller' => 'Users', 'action' => 'view', $studentsMonitor->user->id]) : '' ?></td>
                 <td><?= h($studentsMonitor->role) ?></td>
