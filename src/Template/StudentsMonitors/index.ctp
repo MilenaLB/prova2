@@ -20,11 +20,12 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('student_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('monitor_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_time_start') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_time_fin') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('role') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('feedback') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date_time_start') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('date_time_fin') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -34,11 +35,12 @@
                 <td><?= $this->Number->format($studentsMonitor->id) ?></td>
                 <td><?= $this->Number->format($studentsMonitor->student_id) ?></td>
                 <td><?= $studentsMonitor->has('user') ? $this->Html->link($studentsMonitor->user->name, ['controller' => 'Users', 'action' => 'view', $studentsMonitor->user->id]) : '' ?></td>
-                <td><?= h($studentsMonitor->date_time_start) ?></td>
-                <td><?= h($studentsMonitor->date_time_fin) ?></td>
                 <td><?= h($studentsMonitor->role) ?></td>
                 <td><?= h($studentsMonitor->created) ?></td>
                 <td><?= h($studentsMonitor->modified) ?></td>
+                <td><?= h($studentsMonitor->feedback) ?></td>
+                <td><?= h($studentsMonitor->date_time_start) ?></td>
+                <td><?= h($studentsMonitor->date_time_fin) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $studentsMonitor->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $studentsMonitor->id]) ?>

@@ -27,6 +27,10 @@
             <td><?= h($studentsMonitor->role) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('Feedback') ?></th>
+            <td><?= h($studentsMonitor->feedback) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($studentsMonitor->id) ?></td>
         </tr>
@@ -35,20 +39,20 @@
             <td><?= $this->Number->format($studentsMonitor->student_id) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Date Time Start') ?></th>
-            <td><?= h($studentsMonitor->date_time_start) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Date Time Fin') ?></th>
-            <td><?= h($studentsMonitor->date_time_fin) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Created') ?></th>
             <td><?= h($studentsMonitor->created) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Modified') ?></th>
             <td><?= h($studentsMonitor->modified) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Date Time Start') ?></th>
+            <td><?= h($studentsMonitor->date_time_start) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Date Time Fin') ?></th>
+            <td><?= h($studentsMonitor->date_time_fin) ?></td>
         </tr>
     </table>
 </div>

@@ -63,20 +63,24 @@ class StudentsMonitorsTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
-            ->dateTime('date_time_start')
-            ->requirePresence('date_time_start', 'create')
-            ->notEmpty('date_time_start');
-
-        $validator
-            ->dateTime('date_time_fin')
-            ->requirePresence('date_time_fin', 'create')
-            ->notEmpty('date_time_fin');
-
-        $validator
             ->scalar('role')
             ->maxLength('role', 20)
             ->requirePresence('role', 'create')
             ->notEmpty('role');
+
+        $validator
+            ->scalar('feedback')
+            ->maxLength('feedback', 500)
+            ->requirePresence('feedback', 'create')
+            ->notEmpty('feedback');
+
+        $validator
+            ->dateTime('date_time_start')
+            ->allowEmpty('date_time_start');
+
+        $validator
+            ->dateTime('date_time_fin')
+            ->allowEmpty('date_time_fin');
 
         return $validator;
     }
@@ -90,6 +94,8 @@ class StudentsMonitorsTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
+        $rules->add($rules->isUnique(['date_time_start']));
+        $rules->add($rules->isUnique(['date_time_fin']));
         $rules->add($rules->existsIn(['student_id'], 'Users'));
         $rules->add($rules->existsIn(['monitor_id'], 'Users'));
 

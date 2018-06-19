@@ -14,6 +14,8 @@
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
+$loguser = $this->request->getSession()->read("Auth.User");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,6 +46,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <ul class="right">
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+                <?php if ($loguser): ?>
+              <li><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['username'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
+              <li><?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
+            <?php endif ?>
             </ul>
         </div>
     </nav>

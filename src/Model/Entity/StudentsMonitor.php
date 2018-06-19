@@ -9,11 +9,12 @@ use Cake\ORM\Entity;
  * @property int $id
  * @property int $student_id
  * @property int $monitor_id
- * @property \Cake\I18n\FrozenTime $date_time_start
- * @property \Cake\I18n\FrozenTime $date_time_fin
  * @property string $role
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
+ * @property string $feedback
+ * @property \Cake\I18n\FrozenTime $date_time_start
+ * @property \Cake\I18n\FrozenTime $date_time_fin
  *
  * @property \App\Model\Entity\User $user
  */
@@ -32,11 +33,12 @@ class StudentsMonitor extends Entity
     protected $_accessible = [
         'student_id' => true,
         'monitor_id' => true,
-        'date_time_start' => true,
-        'date_time_fin' => true,
         'role' => true,
         'created' => true,
         'modified' => true,
+        'feedback' => true,
+        'date_time_start' => true,
+        'date_time_fin' => true,
         'user' => true
     ];
 }
