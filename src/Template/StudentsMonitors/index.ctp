@@ -23,7 +23,7 @@
                 <th scope="col"><?= $this->Paginator->sort('Status') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('feedback') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Comentarios') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('date_time_start') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('date_time_fin') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>

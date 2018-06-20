@@ -59,11 +59,13 @@ class StudentsMonitorsController extends AppController
             $studentsMonitor->student_id = $this->Auth->user('id');
             if ($this->StudentsMonitors->save($studentsMonitor)) {
                 $this->Flash->success(__('The students monitor has been saved.'));
-                // $email = new Email('default');
-                // $email->from(['testezerozerosete@gmail.com' => 'PROVA'])
-                //    ->to($StudentsMonitors['email'])
-                //    ->subject('BEM VINDO USUARIO')
-                //    ->send('CADASTRO REALIZADO  COM SUCESSO ');
+               $estudante = $this->StudentsMonitors->get($studentsMonitor->id
+                );
+                  $email = new Email('default');
+                  $email->from(['testezerozerosete@gmail.com' => 'PROVA'])
+                     ->to($estudante['email'])
+                     ->subject('BEM VINDO USUARIO')
+                     ->send('AGEDAMENTO REALIZADO  COM SUCESSO ');
 
 
                 return $this->redirect(['action' => 'index'])
@@ -71,7 +73,8 @@ class StudentsMonitorsController extends AppController
             }
             $this->Flash->error(__('The students monitor could not be saved. Please, try again.'));
         }
-        $monitors = $this->StudentsMonitors->Users->find('list', ['limit' => 200]);
+        $monitors = $this->StudentsMonitors->Users->find('list', ['limit' => 200])->
+        where(['Users.role'=> 'Monitor']);
         $this->set(compact('studentsMonitor', 'monitors'));
         // $this->set(compact('studentsMonitor'));
     }

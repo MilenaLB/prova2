@@ -27,7 +27,7 @@
             <td><?= h($studentsMonitor->role) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Feedback') ?></th>
+            <th scope="row"><?= __('Comentarios') ?></th>
             <td><?= h($studentsMonitor->feedback) ?></td>
         </tr>
         <!-- <tr>

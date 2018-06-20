@@ -17,11 +17,12 @@
         <legend><?= __('Add User') ?></legend>
         <?php
             echo $this->Form->control('role', [ 'label'=> 'Status',
-        'options' => ['Monitor' => 'Monitor', 'Estudante' => 'Estudante'] ]);       echo $this->Form->control('name');
+        'options' => ['Monitor' => 'Monitor', 'Estudante' => 'Estudante'] ]);      
+            echo $this->Form->control('name');
             echo $this->Form->control('username');
             echo $this->Form->control('password');
             echo $this->Form->control('email');
-            echo $this->Form->control('discipline');
+            echo $this->Form->control('discipline',['label'=> 'disciplina','empty' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

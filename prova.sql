@@ -67,7 +67,7 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
-  `discipline` varchar(50) NOT NULL,
+  `discipline` varchar(50),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
