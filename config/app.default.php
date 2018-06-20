@@ -196,15 +196,13 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'className' => 'Mail',
-            /*
-             * The following keys are used in SMTP transports:
-             */
-            'host' => 'localhost',
-            'port' => 25,
-            'timeout' => 30,
-            'username' => null,
-            'password' => null,
+            'className' => 'Smtp',
+            // The following keys are used in SMTP transports
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+            //'timeout' => 30,
+            'username' => 'testezerozerosete@gmail.com',
+            'password' => '@lunoifp3',
             'client' => null,
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),

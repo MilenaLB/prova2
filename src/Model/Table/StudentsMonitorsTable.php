@@ -67,7 +67,7 @@ class StudentsMonitorsTable extends Table
             ->maxLength('role', 20)
             ->requirePresence('role', 'create')
             ->add('role', 'inList', [
-              'rule' => ['inList', ['Realizada', 'Aluno Faltou', 'Cancelada']],
+              'rule' => ['inList', ['Realizado', 'Aluno Faltou', 'Cancelada']],
               'message' => 'Por favor entre com um papel válido!']);
 
         $validator
