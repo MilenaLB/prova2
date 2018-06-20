@@ -23,7 +23,7 @@
             <td><?= $studentsMonitor->has('user') ? $this->Html->link($studentsMonitor->user->name, ['controller' => 'Users', 'action' => 'view', $studentsMonitor->user->id]) : '' ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Role') ?></th>
+            <th scope="row"><?= __('Status') ?></th>
             <td><?= h($studentsMonitor->role) ?></td>
         </tr>
         <tr>

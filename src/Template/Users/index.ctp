@@ -17,7 +17,7 @@
         <thead>
             <tr>
                <!--  <th scope="col"><?= $this->Paginator->sort('id') ?></th> -->
-                <th scope="col"><?= $this->Paginator->sort('role') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Status') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('username') ?></th>
                 <!-- <th scope="col"><?= $this->Paginator->sort('password') ?></th> -->
