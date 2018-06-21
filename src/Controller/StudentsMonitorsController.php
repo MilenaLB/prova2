@@ -100,8 +100,9 @@ class StudentsMonitorsController extends AppController
             }
             $this->Flash->error(__('The students monitor could not be saved. Please, try again.'));
         }
-        $users = $this->StudentsMonitors->Users->find('list', ['limit' => 200]);
-        $this->set(compact('studentsMonitor', 'users'));
+        $monitors = $this->StudentsMonitors->Users->find('list', ['limit' => 200])->
+        where(['Users.role'=> 'Monitor']);
+        $this->set(compact('studentsMonitor', 'monitors'));
     }
 
     /**

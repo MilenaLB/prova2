@@ -86,7 +86,7 @@ class UsersTable extends Table
             ->scalar('discipline')
             ->maxLength('discipline', 50)
             ->requirePresence('discipline', 'create')
-            ->notEmpty('discipline');
+            ->allowEmpty('discipline');
 
         return $validator;
     }

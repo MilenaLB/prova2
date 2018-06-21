@@ -23,13 +23,13 @@
     <fieldset>
         <legend><?= __('Edit Students Monitor') ?></legend>
         <?php
-            echo $this->Form->control('student_id');
-            echo $this->Form->control('monitor_id', ['options' => $users, 'empty' => true]);
+            // echo $this->Form->control('student_id');
+            echo $this->Form->control('monitor_id', ['options' => $monitors, 'empty' => true]);
             echo $this->Form->control('role', [ 'label'=> 'Status',
-            'options' => ['Realizado' => 'Realizado', 'Aluno Faltou' => 'Aluno Faltou', 'Cancelado' => 'Cancelado''pendente'=> 'pendente'] ]);
-            echo $this->Form->control('feedback');
-            echo $this->Form->control('date_time_start', ['empty' => true]);
-            echo $this->Form->control('date_time_fin', ['empty' => true]);
+            'options' => ['Realizado' => 'Realizado', 'Aluno Faltou' => 'Aluno Faltou', 'Cancelado' => 'Cancelado','pendente'=> 'pendente'] ]);
+            echo $this->Form->control('feedback', ['label'=>'Comentarios']);
+            echo $this->Form->control('date_time_start', ['label'=> 'Horario de Inicio','empty' => true]);
+            echo $this->Form->control('date_time_fin', ['label'=> 'Horario final','empty' => true]);
             
         ?>
     </fieldset>

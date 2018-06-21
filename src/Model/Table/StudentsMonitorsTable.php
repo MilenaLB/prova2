@@ -67,18 +67,18 @@ class StudentsMonitorsTable extends Table
             ->maxLength('role', 20)
             ->requirePresence('role', 'create')
             ->add('role', 'inList', [
-              'rule' => ['inList', ['Realizado', 'Aluno Faltou', 'Cancelada']],
+              'rule' => ['inList', ['Realizado', 'Aluno Faltou', 'Cancelada','pendente']],
               'message' => 'Por favor entre com um papel válido!']);
 
         $validator
             ->scalar('feedback')
             ->maxLength('feedback', 500)
             ->requirePresence('feedback', 'create')
-            ->notEmpty('feedback');
+            ->allowEmpty('feedback');
 
         $validator
             ->dateTime('date_time_start')
-            ->allowEmpty('date_time_start');
+            ->notEmpty('date_time_start');
 
         $validator
             ->dateTime('date_time_fin')
